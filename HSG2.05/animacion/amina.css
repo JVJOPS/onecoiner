@@ -1,0 +1,26 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    height: 100%;
+}
+
+.linea {
+    position: absolute;
+    height: 2px; /* Grosor de la línea */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverLinea {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+h1{
+    color: aliceblue;
+}

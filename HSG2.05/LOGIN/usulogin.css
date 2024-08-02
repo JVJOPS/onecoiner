@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #333333, #666666); /* Gradiente de gris oscuro a gris medio */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555555; /* Gris más oscuro */
+    border-radius: 5px;
+}
+
+/* Contenedor principal del formulario de login */
+.login-container {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 2rem;
+    color: #333; /* Gris oscuro */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #333; /* Gris oscuro */
+    box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.2); /* Sombra gris clara */
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #333333, #666666); /* Gradiente de gris oscuro a gris medio */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #666666, #333333); /* Gradiente invertido */
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #cccccc, #999999); /* Gradiente de gris claro a gris medio */
+    color: #333; /* Gris oscuro */
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(to right, #999999, #cccccc); /* Gradiente invertido */
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link p {
+    color: #333; /* Gris oscuro */
+    margin-bottom: 10px;
+}
+
+.register-link a {
+    color: #666; /* Gris medio */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: #333; /* Gris oscuro */
+}
+    

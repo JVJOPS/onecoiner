@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 25px 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu{
+    font-size: 20px;
+    text-align:end;
+    margin-top: 5px;
+}
+
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px; /* Ajusta el ancho del carrusel según tus necesidades */
+    height: 500px; /* Ajusta la altura del carrusel según tus necesidades */
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    left: 20%;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Asegura que cada item ocupe todo el ancho del contenedor */
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    position: relative;
+    top: -50px;
+    left: 0;
+}
+
+.carousel-item img {
+    max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+    max-height: 100%; /* Asegura que la imagen no desborde el contenedor */
+    object-fit: contain; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.primary-button {
+    background-color: #2889e4;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para la sección de noticias */
+.noticias-section {
+    width: 45%;
+}
+
+/* Estilos específicos para la sección del foro */
+.foro-section {
+    width: 45%; /* Ancho del contenedor del foro */
+}
+
+.contenido-foro {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    height: 300px; /* Altura del contenedor del foro, ajusta según necesites */
+    overflow-y: auto; /* Añade scroll si el contenido del foro excede el tamaño */
+}
+/* Estilo para los elementos del carrusel */
+.carousel-item {
+    display: none; /* Oculta los elementos por defecto */
+    opacity: 0; /* Establece la opacidad inicial a 0 */
+    transition: opacity 1s ease-in-out; /* Añade una transición suave para la opacidad */
+}
+
+/* Estilo para el elemento del carrusel activo */
+.carousel-item.active {
+    display: block; /* Muestra el elemento activo */
+    opacity: 1; /* Establece la opacidad del elemento activo a 1 */
+    animation: bounceInLeft 1s ease; /* Aplica la animación 'bounceInLeft' al elemento activo */
+}
+
+/* Definición de la animación 'bounceInLeft' */
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0; /* Comienza con opacidad 0 */
+        transform: translateX(-300px); /* Comienza fuera de la pantalla a la izquierda */
+    }
+    60% {
+        opacity: 1; /* Aumenta la opacidad a 1 */
+        transform: translateX(25px); /* Rebota ligeramente hacia la derecha */
+    }
+    75% {
+        transform: translateX(-10px); /* Rebota hacia la izquierda */
+    }
+    90% {
+        transform: translateX(5px); /* Rebota ligeramente hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Termina en la posición original */
+    }
+}

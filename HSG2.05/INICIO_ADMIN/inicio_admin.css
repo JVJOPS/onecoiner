@@ -1,0 +1,188 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #303030;
+    color: #ffffff;
+}
+
+header {
+    background-color: #303030;
+    color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px; /* Ajusta el ancho del carrusel según tus necesidades */
+    height: 500px; /* Ajusta la altura del carrusel según tus necesidades */
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    left: 20%;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    background-color: #303030;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.carousel-item {
+    max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+    max-height: 100%; /* Asegura que la imagen no desborde el contenedor */
+    object-fit: contain; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #303030;
+    background-color: #b19cd9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b, inset 9px 9px 16px #252525, inset -9px -9px 16px #3b3b3b;
+}
+
+.primary-button {
+    background-color: #b19cd9;
+    color: #303030;
+    border-radius: 15px;
+    border: none;
+}
+
+.footer {
+    background-color: #303030;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para la sección de noticias */
+.noticias-section {
+    width: 45%;
+    background-color: #303030;
+    padding: 20px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    border-radius: 15px;
+}
+
+/* Estilos específicos para la sección del foro */
+.foro-section {
+    width: 45%; /* Ancho del contenedor del foro */
+    background-color: #303030;
+    padding: 20px;
+    box-shadow: 9px 9px 16px #252525, -9px -9px 16px #3b3b3b;
+    border-radius: 15px;
+}
+
+.contenido-foro {
+    background-color: #303030;
+    padding: 10px;
+    border-radius: 15px;
+    height: 300px; /* Altura del contenedor del foro, ajusta según necesites */
+    overflow-y: auto; /* Añade scroll si el contenido del foro excede el tamaño */
+    box-shadow: inset 9px 9px 16px #252525, inset -9px -9px 16px #3b3b3b;
+    color: #ffffff;
+}
+
+/* Estilo para los elementos del carrusel */
+.carousel-item {
+    display: none; /* Oculta los elementos por defecto */
+    opacity: 0; /* Establece la opacidad inicial a 0 */
+    transition: opacity 1s ease-in-out; /* Añade una transición suave para la opacidad */
+}
+
+/* Estilo para el elemento del carrusel activo */
+.carousel-item.active {
+    display: block; /* Muestra el elemento activo */
+    opacity: 1; /* Establece la opacidad del elemento activo a 1 */
+    animation: bounceInLeft 1s ease; /* Aplica la animación 'bounceInLeft' al elemento activo */
+}
+
+/* Definición de la animación 'bounceInLeft' */
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0; /* Comienza con opacidad 0 */
+        transform: translateX(-300px); /* Comienza fuera de la pantalla a la izquierda */
+    }
+    60% {
+        opacity: 1; /* Aumenta la opacidad a 1 */
+        transform: translateX(25px); /* Rebota ligeramente hacia la derecha */
+    }
+    75% {
+        transform: translateX(-10px); /* Rebota hacia la izquierda */
+    }
+    90% {
+        transform: translateX(5px); /* Rebota ligeramente hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Termina en la posición original */
+    }
+}
